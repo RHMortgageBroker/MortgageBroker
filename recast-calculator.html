@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Recast Calculator | Robert Hendley | Peachtree Corners, GA</title>
+  <meta name="description" content="Free mortgage recast calculator. See how a lump-sum principal payment could lower your monthly payment. Robert Hendley, mortgage broker in Peachtree Corners, GA." />
+  <meta name="keywords" content="mortgage recast calculator, loan recast, recast vs refinance, lower monthly payment, principal curtailment, mortgage broker Peachtree Corners GA" />
+  <meta name="geo.region" content="US-GA" />
+  <meta name="geo.placename" content="Peachtree Corners, Georgia" />
+  <meta name="author" content="Robert Hendley, NMLS #971721" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Mortgage Recast Calculator | Robert Hendley | Peachtree Corners, GA" />
+  <meta property="og:description" content="Free mortgage recast calculator. See how a lump-sum payment could lower your monthly payment without refinancing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Robert Hendley | Mortgage Broker | Peachtree Corners, GA" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1e3a5f', light: '#2a4f80', dark: '#14283f' },
+            brand: { DEFAULT: '#2563eb', light: '#3b82f6' },
+            accent: { DEFAULT: '#16a34a', light: '#22c55e' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-18 py-3">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="Barrett Financial Powered By Logo 1.png" alt="Powered by Barrett Financial Group" class="h-[85px] w-auto" />
+          <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-navy font-semibold text-sm">Robert Hendley</span>
+            <span class="text-gray-500 text-xs font-medium tracking-wide uppercase">Residential &amp; Commercial</span>
+            <span class="text-gray-500 text-xs font-medium tracking-wide uppercase">Mortgage Broker · NMLS #971721</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-5">
+          <a href="index.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">About</a>
+          <a href="services.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Loan Programs</a>
+          <a href="recast-calculator.html" class="text-navy font-semibold text-sm">Recast Calculator</a>
+          <a href="reviews.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Reviews</a>
+          <a href="contact.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Contact</a>
+          <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md text-sm" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+        <button id="menuBtn" class="md:hidden text-navy p-2 rounded-lg hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-1 pt-3">
+          <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Home</a>
+          <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">About</a>
+          <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Loan Programs</a>
+          <a href="recast-calculator.html" class="px-3 py-2 text-navy font-semibold rounded-lg bg-blue-50">Recast Calculator</a>
+          <a href="reviews.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Reviews</a>
+          <a href="contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Contact</a>
+          <a href="https://181106.my1003app.com/971721/register" class="mt-2 bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-lg text-center text-sm" target="_blank">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-navy-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Mortgage Recast Calculator</h1>
+      <p class="text-white/70 text-lg max-w-2xl mx-auto">See how a lump-sum principal payment could permanently lower your monthly payment — without refinancing.</p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-navy">Enter Your Loan Details</h2>
+            <p class="text-gray-500 text-sm">Results are estimates based on your inputs.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="balance" class="block text-sm font-medium text-gray-700 mb-1.5">Current Loan Balance <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="balance" min="0" step="1000" placeholder="350,000"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+          <div>
+            <label for="rate" class="block text-sm font-medium text-gray-700 mb-1.5">Current Interest Rate <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <input type="number" id="rate" min="0" max="25" step="0.01" placeholder="6.5"
+                class="w-full border border-gray-200 rounded-lg pl-4 pr-8 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">%</span>
+            </div>
+          </div>
+          <div>
+            <label for="term" class="block text-sm font-medium text-gray-700 mb-1.5">Remaining Loan Term <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <input type="number" id="term" min="1" max="30" step="1" placeholder="27"
+                class="w-full border border-gray-200 rounded-lg pl-4 pr-14 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-xs">years</span>
+            </div>
+          </div>
+          <div>
+            <label for="lumpSum" class="block text-sm font-medium text-gray-700 mb-1.5">Lump Sum Payment <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="lumpSum" min="0" step="1000" placeholder="50,000"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="fee" class="block text-sm font-medium text-gray-700 mb-1.5">Recast Processing Fee <span class="text-gray-400 font-normal">(typically $150–$500)</span></label>
+            <div class="relative w-full sm:w-1/2">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="fee" min="0" step="50" value="250"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+        </div>
+
+        <div id="calcError" class="hidden mt-4 bg-red-50 text-red-700 text-sm rounded-lg px-4 py-3 border border-red-200"></div>
+
+        <button onclick="calculateRecast()"
+          class="mt-6 w-full sm:w-auto bg-accent hover:bg-accent-light text-white font-bold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 text-base">
+          Calculate My Savings
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="hidden mt-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h3 class="text-lg font-bold text-navy mb-6 flex items-center gap-2">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Your Recast Results
+          </h3>
+
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Current Monthly Payment</div>
+              <div id="res-current-payment" class="text-2xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-accent/5 rounded-xl p-4 border border-accent/20">
+              <div class="text-xs text-accent uppercase tracking-wide font-medium mb-1">New Monthly Payment</div>
+              <div id="res-new-payment" class="text-2xl font-bold text-accent">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Monthly Savings</div>
+              <div id="res-monthly-savings" class="text-2xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">New Loan Balance</div>
+              <div id="res-new-balance" class="text-2xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Annual Savings</div>
+              <div id="res-annual-savings" class="text-2xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-navy/5 rounded-xl p-4 border border-navy/15">
+              <div class="text-xs text-navy/70 uppercase tracking-wide font-medium mb-1">Total Interest Savings</div>
+              <div id="res-total-savings" class="text-2xl font-bold text-navy">—</div>
+            </div>
+          </div>
+
+          <div class="bg-navy rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div class="flex-1">
+              <p class="text-white font-semibold text-sm mb-1">Ready to move forward with a recast?</p>
+              <p class="text-white/70 text-xs">Contact Robert Hendley to discuss initiating a recast with your current lender, or explore whether a refinance might save you even more.</p>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+              <a href="contact.html" class="bg-white text-navy hover:bg-gray-100 font-semibold px-5 py-2.5 rounded-lg text-sm transition-all">Contact Robert</a>
+              <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all" target="_blank" rel="noopener noreferrer">Apply Now</a>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 mt-4">* Results are estimates for illustrative purposes only. Actual recast terms, eligibility, fees, and savings will vary by lender. This is not a commitment to lend or guarantee of any specific outcome. Contact your lender to confirm recast eligibility and terms.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Mortgage Recast Information / FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy mb-4">Mortgage Recast Information</h2>
+        <p class="text-gray-500 text-lg">Everything you need to know about recasting your mortgage.</p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            What is a mortgage recast?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            A mortgage recast — also called a loan re-amortization — is when you make a large lump-sum payment directly toward your principal balance, and your lender recalculates (re-amortizes) your remaining monthly payments based on that new, lower balance. Your interest rate and remaining loan term stay exactly the same. The result is a permanently lower monthly payment for the life of the loan.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How do I initiate a mortgage recast?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            <p class="mb-2">To initiate a recast, contact your current mortgage servicer (the company you send your payments to) directly. The typical process involves:</p>
+            <ol class="list-decimal pl-4 space-y-1.5">
+              <li>Calling or writing to your servicer to request a recast and confirming your loan is eligible</li>
+              <li>Completing any required recast request forms they provide</li>
+              <li>Making the qualifying lump-sum principal payment</li>
+              <li>Paying the recast processing fee</li>
+              <li>Receiving your new, lower monthly payment schedule (typically effective the following month or the month after)</li>
+            </ol>
+            <p class="mt-2">Keep in mind: the lump-sum payment must be applied to principal specifically — not to interest or escrow.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            What is the minimum lump-sum (principal curtailment) required?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Minimum requirements vary by lender and loan type, but common thresholds are:
+            <ul class="list-disc pl-4 mt-2 space-y-1.5">
+              <li><strong>Fannie Mae / Conventional:</strong> Typically a minimum of $5,000 or 10% of the original loan balance (some servicers require $10,000+)</li>
+              <li><strong>Freddie Mac / Conventional:</strong> Generally $5,000 minimum</li>
+              <li><strong>Jumbo loans:</strong> Minimum thresholds vary widely by lender — often $25,000 or more</li>
+            </ul>
+            <p class="mt-2">Always confirm the exact minimum with your servicer before initiating the process.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How many times can I recast my mortgage?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Most lenders allow multiple recasts over the life of a loan, but they typically impose a waiting period between recasts — commonly 12 months. Some lenders may limit the total number of recasts (e.g., no more than two per loan). There is no universal rule; it depends entirely on your servicer's policies. If you anticipate making multiple large payments over time, ask your servicer upfront about their recast frequency limits.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            What does a mortgage recast cost?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Recast fees are typically very affordable compared to refinancing. Most lenders charge a flat administrative fee ranging from <strong>$150 to $500</strong>. Some lenders charge as little as $0 for certain loan programs. This is one of the biggest advantages of recasting — you get a permanently lower payment at a fraction of the cost of a refinance, which can run 2–6% of your loan balance in closing costs.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Which loan types are eligible for recasting?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            <p class="mb-2">Not all loan types are eligible for recasting. In general:</p>
+            <ul class="list-disc pl-4 space-y-1.5">
+              <li><strong>Conventional (Fannie Mae / Freddie Mac):</strong> Generally eligible ✓</li>
+              <li><strong>Jumbo loans:</strong> Usually eligible, depending on the lender ✓</li>
+              <li><strong>FHA loans:</strong> Not eligible for recast ✗</li>
+              <li><strong>VA loans:</strong> Not eligible for recast ✗</li>
+              <li><strong>USDA loans:</strong> Not eligible for recast ✗</li>
+            </ul>
+            <p class="mt-2">If you have an FHA, VA, or USDA loan and want to lower your payment, a refinance may be the better path. Contact Robert Hendley to discuss your options.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Does recasting affect my interest rate or loan term?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            No. Your interest rate and remaining loan term remain completely unchanged. A recast only reduces your monthly payment by re-amortizing the lower principal balance over the same remaining term. If you have a 6.5% rate with 24 years remaining, you will still have a 6.5% rate with 24 years remaining after the recast — you will simply owe less principal and therefore have a lower required payment each month.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How long does a recast take to process?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Most servicers complete a recast within <strong>30 to 60 days</strong> of receiving the lump-sum payment and the completed request. The new, lower payment typically takes effect the following billing cycle or the month after. Some lenders are faster (2–4 weeks), while others can take up to 90 days. Ask your servicer for a specific timeline when you initiate the request.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Will recasting affect my credit score?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            No. A mortgage recast does not require a new credit application, income verification, or credit inquiry. Because there is no hard pull on your credit report, recasting has no negative impact on your credit score. In fact, reducing your loan balance could have a modest positive effect on your overall financial profile over time.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Should I recast or just make extra principal payments?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Both strategies reduce your total interest paid, but they work differently:
+            <ul class="list-disc pl-4 mt-2 space-y-1.5">
+              <li><strong>Extra principal payments</strong> (without a recast) shorten your loan term but keep your required monthly payment the same. Great if your goal is to pay off the loan faster.</li>
+              <li><strong>A recast</strong> keeps your term the same but immediately lowers your required monthly payment. Great if your goal is to reduce monthly cash flow obligations — for example, after retirement, a job change, or buying a new home before selling the current one.</li>
+            </ul>
+            <p class="mt-2">The best choice depends on your financial goals. Reach out to Robert Hendley to talk through which approach makes more sense for your situation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Recast vs. Refinance -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy mb-4">Recast vs. Refinance</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Both options can lower your monthly payment — but they work very differently. Here's how to choose.</p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-10">
+        <div class="grid grid-cols-3 text-sm">
+          <!-- Header row -->
+          <div class="bg-gray-50 px-5 py-4 font-semibold text-gray-500 uppercase tracking-wide text-xs border-b border-gray-200">Factor</div>
+          <div class="bg-navy px-5 py-4 font-bold text-white text-center border-b border-navy-light">Recast</div>
+          <div class="bg-brand px-5 py-4 font-bold text-white text-center border-b border-brand-light">Refinance</div>
+
+          <!-- Rows -->
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center">Typical Cost</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">$150 – $500 flat fee</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">2% – 6% of loan balance</div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center bg-gray-50/50">Interest Rate</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm bg-gray-50/50">Stays the same</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm bg-gray-50/50">New rate (higher or lower)</div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center">Loan Term</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">Unchanged</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">Can be changed</div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center bg-gray-50/50">Credit Check</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 bg-gray-50/50">
+            <span class="text-accent font-semibold text-sm">No</span>
+          </div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 bg-gray-50/50">
+            <span class="text-gray-500 text-sm">Yes (hard pull)</span>
+          </div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center">Income Verification</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100">
+            <span class="text-accent font-semibold text-sm">Not required</span>
+          </div>
+          <div class="px-5 py-4 text-center border-b border-gray-100">
+            <span class="text-gray-500 text-sm">Required</span>
+          </div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center bg-gray-50/50">Processing Time</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm bg-gray-50/50">30 – 60 days</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm bg-gray-50/50">30 – 60 days</div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 border-b border-gray-100 flex items-center">Loan Type Required</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">Conventional / Jumbo only</div>
+          <div class="px-5 py-4 text-center border-b border-gray-100 text-gray-600 text-xs sm:text-sm">Most loan types</div>
+
+          <div class="px-5 py-4 font-medium text-gray-700 flex items-center bg-gray-50/50">Cash-Out Option</div>
+          <div class="px-5 py-4 text-center bg-gray-50/50">
+            <span class="text-gray-500 text-sm">No</span>
+          </div>
+          <div class="px-5 py-4 text-center bg-gray-50/50">
+            <span class="text-accent font-semibold text-sm">Yes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- When to choose each -->
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-2xl p-6 text-white">
+          <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Consider a Recast When…
+          </h3>
+          <ul class="space-y-2.5 text-white/80 text-sm">
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You have a large lump sum available (inheritance, bonus, sale proceeds)</li>
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You're satisfied with your current interest rate</li>
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You want to lower your monthly obligations without restarting your loan term</li>
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You want to avoid the cost and paperwork of a refinance</li>
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You bought a new home before selling your old one and need payment relief</li>
+            <li class="flex items-start gap-2"><span class="text-accent-light mt-0.5">›</span> You have a conventional or jumbo loan with an eligible servicer</li>
+          </ul>
+        </div>
+        <div class="bg-brand rounded-2xl p-6 text-white">
+          <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Consider a Refinance When…
+          </h3>
+          <ul class="space-y-2.5 text-white/80 text-sm">
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> Current market rates are significantly lower than your existing rate</li>
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> You want to change your loan term (e.g., 30-year to 15-year)</li>
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> You want to switch loan types (e.g., ARM to fixed-rate)</li>
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> You need to access equity through a cash-out refinance</li>
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> You have an FHA, VA, or USDA loan (not eligible for recast)</li>
+            <li class="flex items-start gap-2"><span class="text-white/60 mt-0.5">›</span> You want to remove mortgage insurance (PMI/MIP)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-navy">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Not Sure Which Path Is Right for You?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">Let's talk through your numbers. Robert Hendley can help you compare a recast against a refinance and find the strategy that saves you the most.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        <a href="contact.html" class="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-lg transition-all duration-200">Contact Robert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="text-white font-bold text-lg mb-1">Robert Hendley</div>
+          <div class="text-sm">Residential &amp; Commercial</div>
+          <div class="text-sm mb-3">Mortgage Broker · NMLS #971721</div>
+          <img src="Barrett Financial Powered By Logo 2.png" alt="Barrett Financial Group" class="h-20 opacity-80 hover:opacity-100 transition-opacity" />
+          <div class="flex items-center gap-2 mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 56" class="w-7 h-8 text-gray-500 flex-shrink-0">
+              <polyline points="2,22 25,4 48,22" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <rect x="8" y="22" width="34" height="26" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <line x1="16" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="16" y1="37" x2="34" y2="37" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <span class="text-xs text-gray-500 leading-tight">Equal Housing<br/>Opportunity</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-white font-semibold mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Loan Programs</a></li>
+            <li><a href="recast-calculator.html" class="hover:text-white transition-colors">Recast Calculator</a></li>
+            <li><a href="reviews.html" class="hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-white font-semibold mb-3">Contact</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:RobertHendley@BarrettFinancial.com" class="hover:text-white transition-colors">RobertHendley@BarrettFinancial.com</a></li>
+            <li><a href="https://181106.my1003app.com/971721/register" class="inline-block mt-2 bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors" target="_blank">Apply Now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-2">
+        <p>Robert Hendley NMLS #971721 | Barrett Financial Group, LLC NMLS #181106 | Equal Housing Opportunity</p>
+        <p>4989 Peachtree Pkwy, Ste 200, Peachtree Corners, GA 30092 | NMLS #2366733</p>
+        <p>This is not a commitment to lend. All loans subject to credit approval, property appraisal, and underwriting guidelines. Rates and terms subject to change without notice. Not all applicants will qualify. Calculator results are estimates for illustrative purposes only.</p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="legal.html" class="hover:text-white transition-colors">Legal</a>
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+          <a href="accessibility-statement.html" class="hover:text-white transition-colors">Accessibility Statement</a>
+        </div>
+        <p class="pt-1">&copy; 2026 Robert Hendley. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Recast Calculator
+    function formatCurrency(value) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
+    }
+
+    function calcMonthlyPayment(principal, annualRate, months) {
+      if (annualRate === 0) return principal / months;
+      const r = annualRate / 100 / 12;
+      return principal * (r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('calcError');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+    }
+
+    function calculateRecast() {
+      const balance  = parseFloat(document.getElementById('balance').value);
+      const rate     = parseFloat(document.getElementById('rate').value);
+      const termYrs  = parseFloat(document.getElementById('term').value);
+      const lumpSum  = parseFloat(document.getElementById('lumpSum').value);
+      const fee      = parseFloat(document.getElementById('fee').value) || 0;
+
+      const errorEl   = document.getElementById('calcError');
+      const resultsEl = document.getElementById('results');
+      errorEl.classList.add('hidden');
+      resultsEl.classList.add('hidden');
+
+      if (!balance || balance <= 0)              { showError('Please enter your current loan balance.'); return; }
+      if (!rate || rate <= 0 || rate > 25)       { showError('Please enter a valid interest rate (e.g. 6.5).'); return; }
+      if (!termYrs || termYrs <= 0)              { showError('Please enter your remaining loan term in years.'); return; }
+      if (!lumpSum || lumpSum <= 0)              { showError('Please enter a lump sum payment amount.'); return; }
+      if (lumpSum >= balance)                    { showError('Your lump sum equals or exceeds your loan balance. You could pay off the loan in full!'); return; }
+
+      const months      = Math.round(termYrs * 12);
+      const curPayment  = calcMonthlyPayment(balance, rate, months);
+      const newBalance  = balance - lumpSum;
+      const newPayment  = calcMonthlyPayment(newBalance, rate, months);
+      const mSavings    = curPayment - newPayment;
+      const aSavings    = mSavings * 12;
+      const curInterest = (curPayment * months) - balance;
+      const newInterest = (newPayment * months) - newBalance;
+      const totalSav    = (curInterest - newInterest) - fee;
+
+      document.getElementById('res-current-payment').textContent = formatCurrency(curPayment);
+      document.getElementById('res-new-balance').textContent     = formatCurrency(newBalance);
+      document.getElementById('res-new-payment').textContent     = formatCurrency(newPayment);
+      document.getElementById('res-monthly-savings').textContent = formatCurrency(mSavings);
+      document.getElementById('res-annual-savings').textContent  = formatCurrency(aSavings);
+      document.getElementById('res-total-savings').textContent   = formatCurrency(totalSav);
+
+      resultsEl.classList.remove('hidden');
+      setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  </script>
+</body>
+</html>
