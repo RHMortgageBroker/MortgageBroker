@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debt Consolidation Calculator | HELOC vs. High-Interest Debt | Robert Hendley | Peachtree Corners, GA</title>
+  <meta name="description" content="Free debt consolidation calculator. See how much you could save by paying off high-interest credit cards, personal loans, or other debt with a HELOC or home equity loan. Robert Hendley, mortgage broker in Peachtree Corners, GA." />
+  <meta name="keywords" content="debt consolidation calculator, HELOC calculator, home equity loan calculator, pay off credit card debt, consolidate credit card debt with home equity, personal loan consolidation, mortgage broker Peachtree Corners GA" />
+  <meta name="geo.region" content="US-GA" />
+  <meta name="geo.placename" content="Peachtree Corners, Georgia" />
+  <meta name="author" content="Robert Hendley, NMLS #971721" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Debt Consolidation Calculator | HELOC vs. High-Interest Debt | Robert Hendley" />
+  <meta property="og:description" content="See how much you could save by consolidating high-interest debt into a HELOC or home equity loan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Robert Hendley | Mortgage Broker | Peachtree Corners, GA" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1e3a5f', light: '#2a4f80', dark: '#14283f' },
+            brand: { DEFAULT: '#2563eb', light: '#3b82f6' },
+            accent: { DEFAULT: '#16a34a', light: '#22c55e' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-18 py-3">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="Barrett Financial Powered By Logo 1.png" alt="Powered by Barrett Financial Group" class="h-[85px] w-auto" />
+          <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-navy font-semibold text-sm">Robert Hendley</span>
+            <span class="text-gray-500 text-xs font-medium tracking-wide uppercase">Residential &amp; Commercial</span>
+            <span class="text-gray-500 text-xs font-medium tracking-wide uppercase">Mortgage Broker · NMLS #971721</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-3 whitespace-nowrap">
+          <a href="index.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">About</a>
+          <a href="services.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Loan Programs</a>
+          <a href="rates.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Rates</a>
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1 text-navy font-semibold text-sm">
+              Calculators
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-10">
+              <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 w-56">
+                <a href="refinance-calculator.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-navy transition-colors">Refinance Calculator</a>
+                <a href="recast-calculator.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-navy transition-colors">Recast Calculator</a>
+                <a href="debt-consolidation-calculator.html" class="block px-4 py-2.5 text-sm text-navy font-semibold bg-blue-50">Debt Consolidation</a>
+              </div>
+            </div>
+          </div>
+          <a href="reviews.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Reviews</a>
+          <a href="contact.html" class="text-gray-600 hover:text-navy font-medium text-sm transition-colors">Contact</a>
+          <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md text-sm" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+        <button id="menuBtn" class="md:hidden text-navy p-2 rounded-lg hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-gray-100">
+        <div class="flex flex-col gap-1 pt-3">
+          <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Home</a>
+          <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">About</a>
+          <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Loan Programs</a>
+          <a href="rates.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Rates</a>
+          <div class="px-3 pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Calculators</div>
+          <a href="refinance-calculator.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Refinance Calculator</a>
+          <a href="recast-calculator.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Recast Calculator</a>
+          <a href="debt-consolidation-calculator.html" class="px-3 py-2 text-navy font-semibold rounded-lg bg-blue-50">Debt Consolidation</a>
+          <a href="reviews.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Reviews</a>
+          <a href="contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Contact</a>
+          <a href="https://181106.my1003app.com/971721/register" class="mt-2 bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-lg text-center text-sm" target="_blank">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-navy-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Debt Consolidation Calculator</h1>
+      <p class="text-white/70 text-lg max-w-2xl mx-auto">See how much a HELOC or home equity loan could save you versus paying off high-interest debt on your own.</p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+
+        <!-- Your Debts -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5-2h5v5M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-navy">Your Current Debts</h2>
+            <p class="text-gray-500 text-sm">Add everything you'd want to pay off — credit cards, an existing HELOC, personal loans, and more.</p>
+          </div>
+        </div>
+
+        <div id="cardRows" class="mb-2">
+          <div class="card-row grid grid-cols-1 sm:grid-cols-[1fr_100px_140px_auto] gap-3 items-end mb-4 pb-4 border-b border-gray-100 sm:border-0 sm:pb-0 sm:mb-3">
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Balance</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-balance w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="100" placeholder="8,000" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">APR</label>
+              <div class="relative">
+                <input type="number" class="card-apr w-full border border-gray-200 rounded-lg pl-3 pr-7 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" max="40" step="0.1" value="24.99" />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">%</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Min. Payment</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-payment w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="10" placeholder="200" />
+              </div>
+            </div>
+            <button type="button" class="remove-card-btn text-gray-300 hover:text-red-500 transition-colors p-2.5" aria-label="Remove debt" title="Remove debt">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <div class="card-row grid grid-cols-1 sm:grid-cols-[1fr_100px_140px_auto] gap-3 items-end mb-4 pb-4 border-b border-gray-100 sm:border-0 sm:pb-0 sm:mb-3">
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Balance</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-balance w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="100" placeholder="5,000" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">APR</label>
+              <div class="relative">
+                <input type="number" class="card-apr w-full border border-gray-200 rounded-lg pl-3 pr-7 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" max="40" step="0.1" value="24.99" />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">%</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Min. Payment</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-payment w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="10" placeholder="150" />
+              </div>
+            </div>
+            <button type="button" class="remove-card-btn text-gray-300 hover:text-red-500 transition-colors p-2.5" aria-label="Remove debt" title="Remove debt">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <div class="card-row grid grid-cols-1 sm:grid-cols-[1fr_100px_140px_auto] gap-3 items-end mb-4 pb-4 border-b border-gray-100 sm:border-0 sm:pb-0 sm:mb-3">
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Balance</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-balance w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="100" placeholder="3,000" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">APR</label>
+              <div class="relative">
+                <input type="number" class="card-apr w-full border border-gray-200 rounded-lg pl-3 pr-7 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" max="40" step="0.1" value="24.99" />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">%</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Min. Payment</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+                <input type="number" class="card-payment w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="10" placeholder="90" />
+              </div>
+            </div>
+            <button type="button" class="remove-card-btn text-gray-300 hover:text-red-500 transition-colors p-2.5" aria-label="Remove debt" title="Remove debt">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+        <button type="button" id="addCardBtn" class="inline-flex items-center gap-1.5 text-brand hover:text-brand-light font-semibold text-sm mb-8 transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          Add Another Debt
+        </button>
+
+        <!-- Your Home Equity -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-9-7v18m-4-9h.01M19 10l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 01-1-1v-5a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1m-6 0h6"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-navy">Your Home Equity</h2>
+            <p class="text-gray-500 text-sm">This determines how much you can actually borrow.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-5 mb-8">
+          <div>
+            <label for="homeValue" class="block text-sm font-medium text-gray-700 mb-1.5">Estimated Home Value <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="homeValue" min="0" step="1000" placeholder="450,000"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+          <div>
+            <label for="mortgageBalance" class="block text-sm font-medium text-gray-700 mb-1.5">Current Mortgage Balance</label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="mortgageBalance" min="0" step="1000" placeholder="280,000"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+          <div>
+            <label for="maxCLTV" class="block text-sm font-medium text-gray-700 mb-1.5">Max Loan-to-Value</label>
+            <div class="relative">
+              <input type="number" id="maxCLTV" min="1" max="100" step="1" value="85"
+                class="w-full border border-gray-200 rounded-lg pl-4 pr-8 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your New Loan -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-navy">Your New Loan</h2>
+            <p class="text-gray-500 text-sm">Choose the type of loan you're considering.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mb-6">
+          <button type="button" id="btnHeloan" class="flex-1 px-4 py-3 rounded-lg text-sm font-semibold transition-all bg-navy text-white shadow-sm">Home Equity Loan (Fixed)</button>
+          <button type="button" id="btnHeloc" class="flex-1 px-4 py-3 rounded-lg text-sm font-semibold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">HELOC (Interest-Only Draw)</button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="loanAmount" class="block text-sm font-medium text-gray-700 mb-1.5">New Loan Amount <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="loanAmount" min="0" step="100" placeholder="Defaults to your total debt above"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+            <p class="text-xs text-gray-400 mt-1">Defaults to the sum of your debts — bump it up if you want extra cash out.</p>
+          </div>
+          <div>
+            <label for="newRate" class="block text-sm font-medium text-gray-700 mb-1.5">New Interest Rate <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <input type="number" id="newRate" min="0" max="25" step="0.01" value="7.00"
+                class="w-full border border-gray-200 rounded-lg pl-4 pr-8 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">%</span>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">Rates vary by lender, credit, and CLTV — contact Robert for your actual rate.</p>
+          </div>
+
+          <div id="heloanFields">
+            <label for="heloanTerm" class="block text-sm font-medium text-gray-700 mb-1.5">Loan Term</label>
+            <select id="heloanTerm"
+              class="w-full border border-gray-200 rounded-lg pl-4 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all appearance-none bg-white">
+              <option value="5">5 years</option>
+              <option value="10">10 years</option>
+              <option value="15" selected>15 years</option>
+              <option value="20">20 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+
+          <div id="helocFields" class="hidden">
+            <div>
+              <label for="drawYears" class="block text-sm font-medium text-gray-700 mb-1.5">Draw Period <span class="text-gray-400 font-normal">(interest-only)</span></label>
+              <div class="relative">
+                <input type="number" id="drawYears" min="1" max="20" step="1" value="10"
+                  class="w-full border border-gray-200 rounded-lg pl-4 pr-14 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-xs">years</span>
+              </div>
+            </div>
+            <div>
+              <label for="repayYears" class="block text-sm font-medium text-gray-700 mb-1.5">Repayment Period</label>
+              <div class="relative">
+                <input type="number" id="repayYears" min="1" max="30" step="1" value="15"
+                  class="w-full border border-gray-200 rounded-lg pl-4 pr-14 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-xs">years</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="closingCosts" class="block text-sm font-medium text-gray-700 mb-1.5">Closing Costs / Fees <span class="text-gray-400 font-normal">(often 2%–6%)</span></label>
+            <div class="relative sm:w-1/2">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+              <input type="number" id="closingCosts" min="0" step="50"
+                class="w-full border border-gray-200 rounded-lg pl-7 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" />
+            </div>
+          </div>
+        </div>
+
+        <div id="calcError" class="hidden mt-4 bg-red-50 text-red-700 text-sm rounded-lg px-4 py-3 border border-red-200"></div>
+
+        <button onclick="calculateDebtConsolidation()"
+          class="mt-6 w-full sm:w-auto bg-accent hover:bg-accent-light text-white font-bold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 text-base">
+          Calculate My Savings
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>
+
+      <!-- Risk callout -->
+      <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6">
+        <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86l-8.18 14.14A2 2 0 004 21h16a2 2 0 001.89-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+        <p class="text-amber-800 text-xs leading-relaxed"><strong>Before you proceed:</strong> A HELOC or home equity loan is secured by your home. If what you're consolidating is currently unsecured (credit cards, personal loans, etc.), you'd be converting it into debt secured by your home — missed payments could then put your home at risk in a way they couldn't before. Make sure the new payment fits your budget before moving forward.</p>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="hidden mt-8 space-y-6">
+
+        <!-- Equity warning -->
+        <div id="equityWarning" class="hidden bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-800 text-sm leading-relaxed"></div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+
+          <!-- Credit cards today -->
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Your Current Debts Today</h3>
+          <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Total Debt to Be Paid Off</div>
+              <div id="res-total-debt" class="text-xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-brand/5 rounded-xl p-4 border border-brand/20">
+              <div class="text-xs text-brand uppercase tracking-wide font-medium mb-1">Min. Payment Today</div>
+              <div id="res-current-payment" class="text-xl font-bold text-brand">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Blended APR</div>
+              <div id="res-blended-apr" class="text-xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Payoff Time (Min. Payment)</div>
+              <div id="res-cc-payoff-time" class="text-xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Total Interest</div>
+              <div id="res-cc-total-interest" class="text-xl font-bold text-navy">—</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Total Paid</div>
+              <div id="res-cc-total-paid" class="text-xl font-bold text-navy">—</div>
+            </div>
+          </div>
+
+          <!-- New loan -->
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Your New Loan</h3>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Loan Amount</div>
+              <div id="res-loan-amount" class="text-xl font-bold text-navy">—</div>
+              <div class="text-[10px] text-gray-400 mt-0.5">(incl. closing costs)</div>
+            </div>
+            <div class="bg-brand/5 rounded-xl p-4 border border-brand/20">
+              <div id="res-new-payment-label" class="text-xs text-brand uppercase tracking-wide font-medium mb-1">New Payment</div>
+              <div id="res-new-payment" class="text-xl font-bold text-brand">—</div>
+            </div>
+            <div id="res-repay-payment-row" class="hidden bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <div class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-1">Payment After Draw</div>
+              <div id="res-repay-payment" class="text-xl font-bold text-navy">—</div>
+            </div>
+          </div>
+
+          <!-- Bottom line -->
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">The Bottom Line</h3>
+          <div class="grid sm:grid-cols-2 gap-4 mb-6">
+            <div id="bottomLineMonthly" class="rounded-2xl p-6 border-2 shadow-sm">
+              <div class="flex items-center gap-2.5 mb-2">
+                <div id="bottomLineMonthlyIconWrap" class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div id="bottomLineMonthlyLabel" class="text-xs uppercase tracking-wide font-bold">Monthly Payment Difference</div>
+              </div>
+              <div id="res-monthly-change" class="text-4xl font-extrabold leading-tight">—</div>
+            </div>
+            <div id="bottomLineInterest" class="rounded-2xl p-6 border-2 shadow-sm">
+              <div class="flex items-center gap-2.5 mb-2">
+                <div id="bottomLineInterestIconWrap" class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <div id="bottomLineInterestLabel" class="text-xs uppercase tracking-wide font-bold">Total Interest Savings</div>
+              </div>
+              <div id="res-interest-saved" class="text-4xl font-extrabold leading-tight">—</div>
+            </div>
+          </div>
+
+          <!-- Verdict -->
+          <div id="verdictBox" class="rounded-xl p-5 mb-6 border">
+            <div class="flex items-start gap-3">
+              <div id="verdictIconWrap" class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg id="verdictIcon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+              </div>
+              <div>
+                <p id="verdictTitle" class="font-bold text-base mb-1"></p>
+                <p id="verdictText" class="text-sm leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-navy rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div class="flex-1">
+              <p class="text-white font-semibold text-sm mb-1">Ready to talk through your options?</p>
+              <p class="text-white/70 text-xs">Contact Robert Hendley to see real HELOC and home equity loan rates for your situation.</p>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+              <a href="contact.html" class="bg-white text-navy hover:bg-gray-100 font-semibold px-5 py-2.5 rounded-lg text-sm transition-all">Contact Robert</a>
+              <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all" target="_blank" rel="noopener noreferrer">Apply Now</a>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 mt-4">* Results are estimates for illustrative purposes only, based on principal &amp; interest only. The new loan amount shown includes closing costs financed into the loan. Current debt payoff uses the minimum payment you enter for each balance, held constant each month, with no new charges added. Actual rates, terms, and savings will vary. This is not a commitment to lend or a guarantee of any specific outcome.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy mb-4">Debt Consolidation Information</h2>
+        <p class="text-gray-500 text-lg">What to know before using your home's equity to pay off debt.</p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How does using a HELOC or home equity loan to pay off debt work?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            You borrow against the equity in your home and use the funds to pay off other balances in full — credit cards, personal loans, an existing HELOC, medical debt, and similar obligations. Instead of several separate high-interest payments, you're left with one loan payment — typically at a much lower interest rate, since the new loan is secured by your home. The trade-off is that debt is now tied to your house instead of just your credit.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            HELOC vs. home equity loan — what's the difference?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            <p class="mb-2"><strong>Home equity loan:</strong> A lump sum with a fixed rate and a fixed monthly payment for the full term — predictable, and behaves like a second mortgage.</p>
+            <p><strong>HELOC (Home Equity Line of Credit):</strong> A revolving credit line, usually with a variable rate. During the "draw period" you often only owe interest on what you've borrowed; once the draw period ends, you enter a "repayment period" where the balance is amortized and your payment typically jumps significantly. Good for flexibility, but the payment shock at the end of the draw period catches many borrowers off guard.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How much equity do I need?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Most lenders will let you borrow up to a combined 80%–90% of your home's value (your existing mortgage plus the new loan). For example, on a $450,000 home with an 85% max and a $280,000 mortgage balance, you'd have roughly $102,500 in available equity ($450,000 × 85% − $280,000). If your total debt exceeds your available equity, you may only be able to consolidate part of it.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            What are the risks of consolidating debt into my home?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            The biggest risk is that you're converting unsecured debt into debt secured by your home. A credit card company or personal loan lender can't take your house if you stop paying — a HELOC or home equity lender can foreclose. It's also common for people to pay off revolving balances like credit cards and then run them back up again, ending up with both the new loan payment and new card debt. Consolidation only works if it's paired with a real change in spending habits.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Is the interest tax-deductible?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Generally, no. Under current federal tax law, HELOC and home equity loan interest is only deductible when the funds are used to buy, build, or substantially improve the home securing the loan. Using the funds to pay off credit cards, personal loans, or other debt does not qualify for the deduction. Consult a tax professional about your specific situation.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            Will this help or hurt my credit score?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            It can go either way. Paying off revolving card balances typically lowers your credit utilization, which often helps your score. Opening a new loan involves a hard credit inquiry and a new account, which can cause a small, temporary dip. Most people see their score recover and often improve within a few months, as long as the paid-off cards aren't run back up.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-navy hover:bg-gray-50 transition-colors">
+            How is this different from a cash-out refinance for debt consolidation?
+            <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            A HELOC or home equity loan sits behind your existing mortgage as a second lien and leaves your current mortgage rate untouched — often the better choice if you already have a low first-mortgage rate. A <a href="refinance-calculator.html" class="text-brand hover:underline font-medium">cash-out refinance</a> replaces your entire first mortgage with a new, larger one and rolls the debt payoff into that single loan — it can make sense if your current mortgage rate is high or you want to simplify to one payment. Robert can help you compare both side by side.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-navy">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Get Out From Under High-Interest Debt?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">Let's look at your real numbers together. Robert Hendley can help you decide whether a HELOC, home equity loan, or cash-out refinance makes the most sense.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://181106.my1003app.com/971721/register" class="bg-accent hover:bg-accent-light text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        <a href="contact.html" class="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-lg transition-all duration-200">Contact Robert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="text-white font-bold text-lg mb-1">Robert Hendley</div>
+          <div class="text-sm">Residential &amp; Commercial</div>
+          <div class="text-sm mb-3">Mortgage Broker · NMLS #971721</div>
+          <img src="Barrett Financial Powered By Logo 2.png" alt="Barrett Financial Group" class="h-20 opacity-80 hover:opacity-100 transition-opacity" />
+          <div class="flex items-center gap-2 mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 56" class="w-7 h-8 text-gray-500 flex-shrink-0">
+              <polyline points="2,22 25,4 48,22" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <rect x="8" y="22" width="34" height="26" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <line x1="16" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="16" y1="37" x2="34" y2="37" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <span class="text-xs text-gray-500 leading-tight">Equal Housing<br/>Opportunity</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-white font-semibold mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Loan Programs</a></li>
+            <li><a href="rates.html" class="hover:text-white transition-colors">Rates</a></li>
+            <li><a href="refinance-calculator.html" class="hover:text-white transition-colors">Refinance Calculator</a></li>
+            <li><a href="recast-calculator.html" class="hover:text-white transition-colors">Recast Calculator</a></li>
+            <li><a href="debt-consolidation-calculator.html" class="hover:text-white transition-colors">Debt Consolidation</a></li>
+            <li><a href="reviews.html" class="hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-white font-semibold mb-3">Contact</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:RobertHendley@BarrettFinancial.com" class="hover:text-white transition-colors">RobertHendley@BarrettFinancial.com</a></li>
+            <li><a href="https://181106.my1003app.com/971721/register" class="inline-block mt-2 bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors" target="_blank">Apply Now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-2">
+        <p>Robert Hendley NMLS #971721 | Barrett Financial Group, LLC NMLS #181106 | Equal Housing Opportunity | Equal Housing Lender</p>
+        <p>4989 Peachtree Pkwy, Ste 200, Peachtree Corners, GA 30092 | NMLS #2366733</p>
+        <p>GA 181106 | FL MLD1880 | TN 204577 | SC MLS – 181106</p>
+        <p>This is not a commitment to lend. All loans subject to credit approval, property appraisal, and underwriting guidelines. Rates and terms subject to change without notice. Not all applicants will qualify. Calculator results are estimates for illustrative purposes only. | <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/181106" class="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/181106</a></p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="legal.html" class="hover:text-white transition-colors">Legal</a>
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+          <a href="accessibility-statement.html" class="hover:text-white transition-colors">Accessibility Statement</a>
+          <a href="sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
+        </div>
+        <p class="pt-1">&copy; 2026 Robert Hendley. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // ---------- Card row management ----------
+    function updateRemoveButtons() {
+      const rows = document.querySelectorAll('.card-row');
+      rows.forEach(row => {
+        const btn = row.querySelector('.remove-card-btn');
+        btn.style.visibility = rows.length > 1 ? 'visible' : 'hidden';
+      });
+    }
+
+    function addCardRow() {
+      const container = document.getElementById('cardRows');
+      const row = document.createElement('div');
+      row.className = 'card-row grid grid-cols-1 sm:grid-cols-[1fr_100px_140px_auto] gap-3 items-end mb-4 pb-4 border-b border-gray-100 sm:border-0 sm:pb-0 sm:mb-3';
+      row.innerHTML = `
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1">Balance</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+            <input type="number" class="card-balance w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="100" placeholder="5,000" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1">APR</label>
+          <div class="relative">
+            <input type="number" class="card-apr w-full border border-gray-200 rounded-lg pl-3 pr-7 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" max="40" step="0.1" value="24.99" />
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">%</span>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1">Min. Payment</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-sm">$</span>
+            <input type="number" class="card-payment w-full border border-gray-200 rounded-lg pl-7 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all" min="0" step="10" placeholder="100" />
+          </div>
+        </div>
+        <button type="button" class="remove-card-btn text-gray-300 hover:text-red-500 transition-colors p-2.5" aria-label="Remove debt" title="Remove debt">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      `;
+      container.appendChild(row);
+      updateRemoveButtons();
+    }
+
+    document.getElementById('addCardBtn').addEventListener('click', addCardRow);
+    document.getElementById('cardRows').addEventListener('click', (e) => {
+      const btn = e.target.closest('.remove-card-btn');
+      if (!btn) return;
+      const rows = document.querySelectorAll('.card-row');
+      if (rows.length <= 1) return;
+      btn.closest('.card-row').remove();
+      updateRemoveButtons();
+      recalcLoanAmountLive();
+    });
+    document.getElementById('cardRows').addEventListener('input', (e) => {
+      if (e.target.classList.contains('card-balance')) recalcLoanAmountLive();
+    });
+    updateRemoveButtons();
+
+    // ---------- Loan type toggle ----------
+    let loanType = 'heloan';
+    const ACTIVE_BTN = 'flex-1 px-4 py-3 rounded-lg text-sm font-semibold transition-all bg-navy text-white shadow-sm';
+    const INACTIVE_BTN = 'flex-1 px-4 py-3 rounded-lg text-sm font-semibold transition-all bg-gray-100 text-gray-600 hover:bg-gray-200';
+
+    function setLoanType(type) {
+      loanType = type;
+      const heloanBtn = document.getElementById('btnHeloan');
+      const helocBtn = document.getElementById('btnHeloc');
+      const heloanFields = document.getElementById('heloanFields');
+      const helocFields = document.getElementById('helocFields');
+      if (type === 'heloan') {
+        heloanBtn.className = ACTIVE_BTN;
+        helocBtn.className = INACTIVE_BTN;
+        heloanFields.classList.remove('hidden');
+        helocFields.classList.add('hidden');
+        helocFields.classList.remove('contents');
+      } else {
+        helocBtn.className = ACTIVE_BTN;
+        heloanBtn.className = INACTIVE_BTN;
+        helocFields.classList.remove('hidden');
+        helocFields.classList.add('contents');
+        heloanFields.classList.add('hidden');
+      }
+    }
+    document.getElementById('btnHeloan').addEventListener('click', () => setLoanType('heloan'));
+    document.getElementById('btnHeloc').addEventListener('click', () => setLoanType('heloc'));
+
+    // ---------- Calculator math ----------
+    function formatCurrency(value) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
+    }
+
+    function calcMonthlyPayment(principal, annualRate, months) {
+      if (annualRate === 0) return principal / months;
+      const r = annualRate / 100 / 12;
+      return principal * (r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
+    }
+
+    function formatMonths(months) {
+      if (!isFinite(months) || months <= 0) return 'N/A';
+      if (months >= 600) return '50+ yrs';
+      const years = Math.floor(months / 12);
+      const rem = Math.round(months % 12);
+      if (years === 0) return `${rem} mo`;
+      if (rem === 0) return `${years} yr`;
+      return `${years} yr ${rem} mo`;
+    }
+
+    // Simulates paying a fixed minimum payment against a balance each month until it's
+    // paid off (or caps at 50 years if the payment can't keep up with interest).
+    function simulateDebtPayoff(balance, aprPct, payment) {
+      const monthlyRate = aprPct / 100 / 12;
+      let bal = balance;
+      let totalInterest = 0;
+      let months = 0;
+      const maxMonths = 600;
+      while (bal > 0.5 && months < maxMonths) {
+        const interest = bal * monthlyRate;
+        const pmt = Math.min(payment, bal + interest);
+        bal = bal + interest - pmt;
+        totalInterest += interest;
+        months++;
+      }
+      return { months, totalInterest, maxedOut: bal > 0.5 };
+    }
+
+    // Tracks whether the user has manually typed their own loan amount / closing costs
+    // so we know whether it's still safe to auto-fill those fields live.
+    let loanAmountTouched = false;
+    let closingCostsTouched = false;
+
+    // Keeps the loan amount field in sync with the sum of entered debt balances in
+    // real time, as long as the user hasn't overridden it themselves.
+    function recalcLoanAmountLive() {
+      if (loanAmountTouched) return;
+      const total = Array.from(document.querySelectorAll('.card-balance'))
+        .reduce((s, el) => s + (parseFloat(el.value) || 0), 0);
+      document.getElementById('loanAmount').value = total > 0 ? Math.round(total) : '';
+      recalcClosingCostsLive();
+    }
+
+    // Keeps closing costs at 4% of the loan amount in real time, as long as the user
+    // hasn't overridden it themselves.
+    function recalcClosingCostsLive() {
+      if (closingCostsTouched) return;
+      const loanAmt = parseFloat(document.getElementById('loanAmount').value) || 0;
+      document.getElementById('closingCosts').value = loanAmt > 0 ? Math.round(loanAmt * 0.04) : '';
+    }
+
+    document.getElementById('loanAmount').addEventListener('input', () => {
+      loanAmountTouched = true;
+      recalcClosingCostsLive();
+    });
+    document.getElementById('closingCosts').addEventListener('input', () => { closingCostsTouched = true; });
+
+    function showError(msg) {
+      const el = document.getElementById('calcError');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+    }
+
+    function setVerdict(tone, title, text) {
+      const box = document.getElementById('verdictBox');
+      const iconWrap = document.getElementById('verdictIconWrap');
+      const icon = document.getElementById('verdictIcon');
+      const tones = {
+        good:    { box: 'bg-accent/5 border-accent/20', iconWrap: 'bg-accent/15', icon: 'text-accent', title: 'text-accent', path: 'M5 13l4 4L19 7' },
+        caution: { box: 'bg-amber-50 border-amber-200', iconWrap: 'bg-amber-100', icon: 'text-amber-600', title: 'text-amber-700', path: 'M12 9v2m0 4h.01M10.29 3.86l-8.18 14.14A2 2 0 004 21h16a2 2 0 001.89-3L13.71 3.86a2 2 0 00-3.42 0z' },
+        bad:     { box: 'bg-red-50 border-red-200', iconWrap: 'bg-red-100', icon: 'text-red-600', title: 'text-red-700', path: 'M6 18L18 6M6 6l12 12' },
+      };
+      const t = tones[tone];
+      box.className = `rounded-xl p-5 mb-6 border ${t.box}`;
+      iconWrap.className = `w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${t.iconWrap}`;
+      icon.setAttribute('class', `w-5 h-5 ${t.icon}`);
+      icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${t.path}"/>`;
+      document.getElementById('verdictTitle').className = `font-bold text-base mb-1 ${t.title}`;
+      document.getElementById('verdictTitle').textContent = title;
+      document.getElementById('verdictText').textContent = text;
+    }
+
+    // Colors a Bottom Line tile green when it's good news, red when it isn't —
+    // these two numbers are the headline result, so they should read at a glance.
+    function paintBottomLineTile(boxId, iconWrapId, labelId, valueId, positive) {
+      const box = document.getElementById(boxId);
+      const iconWrap = document.getElementById(iconWrapId);
+      const label = document.getElementById(labelId);
+      const value = document.getElementById(valueId);
+      if (positive) {
+        box.className = 'rounded-2xl p-6 border-2 shadow-sm bg-accent/5 border-accent/30';
+        iconWrap.className = 'w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 bg-accent/15 text-accent';
+        label.className = 'text-xs uppercase tracking-wide font-bold text-accent';
+        value.className = 'text-4xl font-extrabold leading-tight text-accent';
+      } else {
+        box.className = 'rounded-2xl p-6 border-2 shadow-sm bg-red-50 border-red-200';
+        iconWrap.className = 'w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 bg-red-100 text-red-600';
+        label.className = 'text-xs uppercase tracking-wide font-bold text-red-600';
+        value.className = 'text-4xl font-extrabold leading-tight text-red-600';
+      }
+    }
+
+    function calculateDebtConsolidation() {
+      const errorEl = document.getElementById('calcError');
+      const resultsEl = document.getElementById('results');
+      const equityWarningEl = document.getElementById('equityWarning');
+      errorEl.classList.add('hidden');
+      resultsEl.classList.add('hidden');
+      equityWarningEl.classList.add('hidden');
+
+      // Gather debts
+      const cards = [];
+      let missingPayment = false;
+      let paymentTooLow = null; // holds the first offending row's numbers, if any
+      document.querySelectorAll('.card-row').forEach(row => {
+        const balance = parseFloat(row.querySelector('.card-balance').value) || 0;
+        const apr = parseFloat(row.querySelector('.card-apr').value) || 0;
+        const payment = parseFloat(row.querySelector('.card-payment').value) || 0;
+        if (balance > 0) {
+          cards.push({ balance, apr, payment });
+          if (payment <= 0) {
+            missingPayment = true;
+          } else {
+            const monthlyInterest = balance * (apr / 100 / 12);
+            if (payment <= monthlyInterest && !paymentTooLow) {
+              paymentTooLow = { balance, payment, monthlyInterest };
+            }
+          }
+        }
+      });
+      if (cards.length === 0) { showError('Please enter at least one debt.'); return; }
+      if (missingPayment) { showError('Please enter a minimum payment for each debt.'); return; }
+      if (paymentTooLow) {
+        showError(`A minimum payment of ${formatCurrency(paymentTooLow.payment)} on a ${formatCurrency(paymentTooLow.balance)} balance doesn't even cover the ${formatCurrency(paymentTooLow.monthlyInterest)}/mo in interest — that balance would never be paid off and grow indefinitely. Please increase the minimum payment or double-check the balance/APR.`);
+        return;
+      }
+
+      const homeValue       = parseFloat(document.getElementById('homeValue').value);
+      const mortgageBalance = parseFloat(document.getElementById('mortgageBalance').value) || 0;
+      const maxCLTV          = parseFloat(document.getElementById('maxCLTV').value) || 85;
+      const newRate           = parseFloat(document.getElementById('newRate').value);
+
+      if (!homeValue || homeValue <= 0)             { showError('Please enter your estimated home value.'); return; }
+      if (!newRate || newRate <= 0 || newRate > 25) { showError('Please enter a valid new interest rate.'); return; }
+
+      let termMonths = 0, drawMonths = 0, repayMonths = 0;
+      if (loanType === 'heloan') {
+        const termYears = parseFloat(document.getElementById('heloanTerm').value);
+        if (!termYears) { showError('Please select a loan term.'); return; }
+        termMonths = termYears * 12;
+      } else {
+        const drawYears = parseFloat(document.getElementById('drawYears').value);
+        const repayYears = parseFloat(document.getElementById('repayYears').value);
+        if (!drawYears || drawYears <= 0)   { showError('Please enter a draw period.'); return; }
+        if (!repayYears || repayYears <= 0) { showError('Please enter a repayment period.'); return; }
+        drawMonths = drawYears * 12;
+        repayMonths = repayYears * 12;
+      }
+
+      // Debt totals
+      const totalDebt = cards.reduce((s, c) => s + c.balance, 0);
+      const blendedApr = cards.reduce((s, c) => s + c.balance * c.apr, 0) / totalDebt;
+      const currentMinPayment = cards.reduce((s, c) => s + c.payment, 0);
+
+      let ccTotalInterest = 0, ccMonths = 0;
+      cards.forEach(c => {
+        const sim = simulateDebtPayoff(c.balance, c.apr, c.payment);
+        ccTotalInterest += sim.totalInterest;
+        ccMonths = Math.max(ccMonths, sim.months);
+      });
+
+      // New loan amount and closing costs are kept live-populated by recalcLoanAmountLive()
+      // and recalcClosingCostsLive() as the user types, so we just read whatever's in the fields.
+      const requestedLoanAmount = parseFloat(document.getElementById('loanAmount').value) || 0;
+      if (requestedLoanAmount <= 0) { showError('Please enter a new loan amount.'); return; }
+
+      // Equity
+      const availableEquity = Math.max(0, (homeValue * maxCLTV / 100) - mortgageBalance);
+
+      const closingCosts = parseFloat(document.getElementById('closingCosts').value) || 0;
+
+      // Closing costs are financed into the loan, so the amount actually borrowed (and
+      // amortized) is the requested amount plus fees — capped at what's actually available.
+      const effectiveLoanAmount = requestedLoanAmount + closingCosts;
+      const financedAmount = Math.min(effectiveLoanAmount, availableEquity);
+      const shortfall = effectiveLoanAmount - financedAmount;
+      const insufficientEquity = shortfall > 0.5;
+
+      if (insufficientEquity) {
+        if (financedAmount <= 0) {
+          equityWarningEl.textContent = `Based on a ${maxCLTV}% max loan-to-value, you don't currently have available equity for this loan.`;
+        } else {
+          equityWarningEl.textContent = `Your requested loan amount plus closing costs comes to ${formatCurrency(effectiveLoanAmount)}, but your available equity at a ${maxCLTV}% LTV is only ${formatCurrency(availableEquity)}. Figures below reflect a loan capped at ${formatCurrency(financedAmount)}.`;
+        }
+        equityWarningEl.classList.remove('hidden');
+      }
+
+      // New loan
+      let newPayment = 0, newTotalInterest = 0, newTotalMonths = 0, repayPayment = null;
+      if (financedAmount > 0) {
+        if (loanType === 'heloan') {
+          newPayment = calcMonthlyPayment(financedAmount, newRate, termMonths);
+          newTotalInterest = (newPayment * termMonths) - financedAmount;
+          newTotalMonths = termMonths;
+        } else {
+          newPayment = financedAmount * (newRate / 100 / 12); // interest-only draw payment
+          const drawInterest = newPayment * drawMonths;
+          repayPayment = calcMonthlyPayment(financedAmount, newRate, repayMonths);
+          const repayInterest = (repayPayment * repayMonths) - financedAmount;
+          newTotalInterest = drawInterest + repayInterest;
+          newTotalMonths = drawMonths + repayMonths;
+        }
+      }
+
+      const monthlyChange = currentMinPayment - newPayment;
+      const interestSaved = ccTotalInterest - newTotalInterest;
+
+      // ---- Render ----
+      document.getElementById('res-total-debt').textContent = formatCurrency(totalDebt);
+      document.getElementById('res-blended-apr').textContent = blendedApr.toFixed(2) + '%';
+      document.getElementById('res-current-payment').textContent = formatCurrency(currentMinPayment);
+      document.getElementById('res-cc-payoff-time').textContent = formatMonths(ccMonths);
+      document.getElementById('res-cc-total-interest').textContent = formatCurrency(ccTotalInterest);
+      document.getElementById('res-cc-total-paid').textContent = formatCurrency(totalDebt + ccTotalInterest);
+
+      document.getElementById('res-loan-amount').textContent = formatCurrency(financedAmount);
+
+      const repayRow = document.getElementById('res-repay-payment-row');
+      if (loanType === 'heloc' && financedAmount > 0) {
+        document.getElementById('res-new-payment-label').textContent = 'Draw Payment (Interest-Only)';
+        document.getElementById('res-repay-payment').textContent = formatCurrency(repayPayment);
+        repayRow.classList.remove('hidden');
+      } else {
+        document.getElementById('res-new-payment-label').textContent = 'New Payment (Fixed)';
+        repayRow.classList.add('hidden');
+      }
+      document.getElementById('res-new-payment').textContent = financedAmount > 0 ? formatCurrency(newPayment) : 'N/A';
+
+      document.getElementById('res-monthly-change').textContent = (monthlyChange >= 0 ? '' : '-') + formatCurrency(Math.abs(monthlyChange)) + (monthlyChange >= 0 ? ' less/mo' : ' more/mo');
+      document.getElementById('res-interest-saved').textContent = (interestSaved >= 0 ? 'Save ' : '-') + formatCurrency(Math.abs(interestSaved));
+      paintBottomLineTile('bottomLineMonthly', 'bottomLineMonthlyIconWrap', 'bottomLineMonthlyLabel', 'res-monthly-change', monthlyChange >= 0);
+      paintBottomLineTile('bottomLineInterest', 'bottomLineInterestIconWrap', 'bottomLineInterestLabel', 'res-interest-saved', interestSaved >= 0);
+
+      // Verdict
+      if (financedAmount <= 0) {
+        setVerdict('bad', 'Not Enough Equity to Consolidate',
+          `Based on a ${maxCLTV}% max loan-to-value, you don't have available equity to fund this loan right now. Talk to Robert about other options, or check back as your equity grows.`);
+      } else {
+        const shortfallNote = insufficientEquity
+          ? ` Keep in mind: this reflects a loan capped at ${formatCurrency(financedAmount)} based on your available equity — you requested ${formatCurrency(effectiveLoanAmount)} including closing costs.`
+          : '';
+        if (monthlyChange > 0 && interestSaved > 0) {
+          setVerdict('good', 'This Looks Like a Smart Move',
+            `You'd pay about ${formatCurrency(monthlyChange)} less per month and save roughly ${formatCurrency(interestSaved)} in interest compared to paying off this debt at the minimum.${shortfallNote}`);
+        } else if (monthlyChange > 0 && interestSaved <= 0) {
+          setVerdict('caution', 'Lower Payment, But Possibly More Total Cost',
+            `Your payment would drop by about ${formatCurrency(monthlyChange)} per month, but stretching the balance out over ${formatMonths(newTotalMonths)} could cost roughly ${formatCurrency(Math.abs(interestSaved))} more in interest than grinding through this debt on your own. A shorter term would cost more per month but save more overall.${shortfallNote}`);
+        } else if (monthlyChange <= 0 && interestSaved > 0) {
+          setVerdict('caution', 'Faster & Cheaper, But a Higher Payment',
+            `You'd save roughly ${formatCurrency(interestSaved)} in interest and be debt-free sooner, but your monthly payment would go up by about ${formatCurrency(Math.abs(monthlyChange))} compared to your current card minimums.${shortfallNote}`);
+        } else {
+          setVerdict('bad', 'This Structure May Not Help',
+            `At these terms, this consolidation would cost more per month and more in total interest than continuing to pay down this debt on your own. Try a lower rate, longer term, or smaller loan amount.${shortfallNote}`);
+        }
+      }
+
+      resultsEl.classList.remove('hidden');
+      setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  </script>
+</body>
+</html>
